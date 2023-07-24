@@ -34,6 +34,36 @@ let jokes = [
   }
 ];
 
+app.get('/jokes', (req, res) => {
+  console.log('in server, /jokes', jokes)
+  res.send(jokes)
+})
+
+app.post('/jokes', (req, res) => {
+  const whoseJoke = req.body.whoseJoke
+  const jokeQuestion = req.body.jokeQuestion
+  const punchLine = req.body.punchLine
+
+  let incomingJoke = {
+      whoseJoke,
+      jokeQuestion,
+      punchLine,
+  }
+
+  console.log('current joke:', incomingJoke)
+  // Calculation based on incoming data
+
+  jokes.push({
+      // Adding newest joke to history, as object
+      // This is a shorthand example for assigning key value pairs
+      whoseJoke,
+      jokeQuestion,
+      punchLine,
+  })
+  res.sendStatus(201)
+})
+
+
 // serve back static files
 app.use(express.static('server/public'));
 
