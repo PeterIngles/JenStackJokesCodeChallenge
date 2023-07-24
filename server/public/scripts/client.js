@@ -65,6 +65,6 @@ function render(jokes) {
     for (let joke of jokes) {
         console.log('joke is:', joke.whoseJoke)
         $('#outputDiv').append(`
-        <li>${joke.whoseJoke}, ${joke.jokeQuestion}, ${joke.punchLine}</li>`)
+        <li>${joke.whoseJoke},  ${joke.jokeQuestion}  ${joke.punchLine}</li>`)
     }
 }
