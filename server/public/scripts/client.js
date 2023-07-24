@@ -41,7 +41,7 @@ function addJoke(){
         jokeQuestion,
         punchLine,
     }
-    // Store whosJoke, question and punchline in dataToSend
+    // Store whoseJoke, question and punchline in dataToSend
     // Ajax POST request
     // GET to retrieve latest history
     // Rerender
@@ -59,8 +59,8 @@ function addJoke(){
 
 function render(jokes) {
     console.log("In render")
-    // Will clear DOM container for results
-    // Append new results to the DOM
+    // Will clear DOM container for jokes
+    // Append new jokes to the DOM
     $('#outputDiv').empty()
     for (let joke of jokes) {
         console.log('joke is:', joke.whoseJoke)

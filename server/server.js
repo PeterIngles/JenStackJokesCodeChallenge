@@ -51,7 +51,6 @@ app.post('/jokes', (req, res) => {
   }
 
   console.log('current joke:', incomingJoke)
-  // Calculation based on incoming data
 
   jokes.push({
       // Adding newest joke to history, as object
